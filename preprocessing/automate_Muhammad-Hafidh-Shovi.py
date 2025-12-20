@@ -3,7 +3,11 @@ import os
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
 INPUT_FILE = "../stunting_wasting_dataset.csv"
+<<<<<<< HEAD
 OUTPUT_DIR = "."
+=======
+OUTPUT_DIR = "preprocessing"
+>>>>>>> 897e7c36b84a23c38bd2c8c3c50871c99fb4c741
 OUTPUT_FILE = "stunting_wasting_preprocessed.csv"
 
 
