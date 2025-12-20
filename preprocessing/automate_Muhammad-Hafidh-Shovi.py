@@ -2,7 +2,7 @@ import pandas as pd
 import os
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-INPUT_FILE = "stunting_wasting_dataset.csv"
+INPUT_FILE = "preprocessing/stunting_wasting_dataset.csv"
 OUTPUT_DIR = "preprocessing"
 OUTPUT_FILE = "stunting_wasting_preprocessed.csv"
 
