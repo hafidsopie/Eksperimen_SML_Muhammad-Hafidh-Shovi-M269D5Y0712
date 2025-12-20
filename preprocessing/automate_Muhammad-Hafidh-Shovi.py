@@ -2,9 +2,10 @@ import pandas as pd
 import os
 from sklearn.preprocessing import LabelEncoder, StandardScaler
 
-INPUT_FILE = "preprocessing/stunting_wasting_dataset.csv"
-OUTPUT_DIR = "preprocessing"
+INPUT_FILE = "../stunting_wasting_dataset.csv"
+OUTPUT_DIR = "."
 OUTPUT_FILE = "stunting_wasting_preprocessed.csv"
+
 
 def preprocess_data(input_path: str):
     print("=== Memulai preprocessing dataset stunting & wasting ===")
@@ -51,15 +52,14 @@ def preprocess_data(input_path: str):
     scaler = StandardScaler()
     df[numerical_cols] = scaler.fit_transform(df[numerical_cols])
 
-    # =====================
-    # 6. Simpan Hasil Preprocessing
-    # =====================
-    os.makedirs(OUTPUT_DIR, exist_ok=True)
-    output_path = os.path.join(OUTPUT_DIR, OUTPUT_FILE)
-    df.to_csv(output_path, index=False)
+# =====================
+# 6. Simpan Hasil Preprocessing
+# =====================
+    OUTPUT_FILE = "stunting_wasting_preprocessed.csv"
+    df.to_csv(OUTPUT_FILE, index=False)
 
     print("=== Preprocessing selesai ===")
-    print(f"File disimpan di: {output_path}")
+    print(f"File disimpan di: {OUTPUT_FILE}")
 
     return df
 
